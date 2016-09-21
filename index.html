@@ -6,19 +6,22 @@
       <!-- Angular -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
-    <script type="text/javascript" src="public/scripts/app.js"></script>
-    <script type="text/javascript" src="public/scripts/weatherDirective.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/weatherDirective.js"></script>
+    <script type="text/javascript" src="scripts/controllers/WeatherIndexController.js"></script>
 
       <!-- StyleSheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
   </head>
   <body>
 
     Lets see a 4 here: {{2*2}}
 
-    <current-weather city="San Francisco"></current-weather>
+  <div class="container" ng-controller="WeatherIndexController as WeatherIndexCtrl">
+    <current-weather city="{{cityName}}"></current-weather>
+  </div>
 
   </body>
 </html>
